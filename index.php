@@ -4,55 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> PHP </title>
+    <title>PHP</title>
 </head>
 <body>
     <h1>Hello World</h1>
     <?php
-    $author = 'Sazid!';
+        $author = 'SAZID';
     ?>
-
-    <h1>Hey, 
-    <?php echo $author;
-    ?>
+    <h1>Hi
+    <?php echo $author; ?>    
     </h1>
 
-    <br>
-    <h3>
-    <?php
-    //string basics
-    $str = "Hello World From MIST";
+    <?php 
+      //string basics
+      $str = "hello world from MIST";
+      echo strlen($str) . '<br/>';
+      echo str_word_count($str) . '<br/>';
 
+      //arrays
+      $students = [
+        'Sazid' => 22,
+        'Mehedi' => 23,
+        'Rima' => 24
+      ];
+      foreach($students as $name => $roll)
+      {
+        echo "Name: ". $name. ','. ' Roll: '. $roll. '<br/>';
+      }
 
-    //count the length of any string
-    echo strlen($str) . '<br>';
+      ?>
+      <?php
 
-    //count how any words are there in a sentence
-    echo str_word_count($str) . '<br>';
+      date_default_timezone_set('America/Los_Angeles');
+      echo date('Y-M-D h:m:sa');
 
-    ?>
-    </h3>
+      ?>
 
-    <tb>
-        
-    <?php
-    //arrays
-    
-    $students = [
-        'Sazid' => 21,
-        'Rima' => 22,
-        'Mehedi' => 23
-        ];
-
-        foreach($students as $name=>$roll)
-        {
-            echo "Name : " . $name . ', ' . 'Roll : ' . $roll . '<br>';
-        }
-
-    ?>
-    </tb>
-
+      <br>
+      <?php include 'footer.php' ?>
 
     
 </body>
-</html>
+</html> 
